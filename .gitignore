@@ -1,0 +1,43 @@
+# 環境変数
+.env
+.env.local
+.env.*.local
+
+# 機密情報
+*.key
+*.secret
+*.pem
+
+# ログファイル
+*.log
+
+# OS固有ファイル
+.DS_Store
+Thumbs.db
+
+# エディタ設定
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 一時ファイル
+*.tmp
+*.temp
+*~
+
+# バックアップファイル
+*.bak
+*.backup
+
+# 圧縮ファイル（必要に応じて）
+# *.zip
+# *.tar.gz
+
+# node_modules（もしNode.jsを使用する場合）
+# node_modules/
+
+# ビルド成果物（もしビルドツールを使用する場合）
+# dist/
+# build/
+
