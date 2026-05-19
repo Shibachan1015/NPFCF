@@ -1,7 +1,9 @@
-// テーマ切り替え機能（ページ読み込み前に実行）
+// テーマ・言語切り替え機能（ページ読み込み前に実行）
 (function () {
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
+    const savedLang = localStorage.getItem('lang') || 'ja';
+    document.documentElement.setAttribute('lang', savedLang);
 })();
 
 // モバイルメニューのトグル
@@ -75,6 +77,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 themeIcon.textContent = '☀️';
             } else {
                 themeIcon.textContent = '🌙';
+            }
+        }
+    }
+
+    // 言語切り替え機能
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+        const langLabel = langToggle.querySelector('.lang-label');
+        const savedLang = localStorage.getItem('lang') || 'ja';
+        html.setAttribute('lang', savedLang);
+        updateLangLabel(savedLang);
+
+        langToggle.addEventListener('click', function () {
+            const currentLang = html.getAttribute('lang');
+            const newLang = currentLang === 'ja' ? 'en' : 'ja';
+            html.setAttribute('lang', newLang);
+            localStorage.setItem('lang', newLang);
+            updateLangLabel(newLang);
+        });
+
+        function updateLangLabel(lang) {
+            if (langLabel) {
+                langLabel.textContent = lang === 'ja' ? 'EN' : 'JA';
             }
         }
     }

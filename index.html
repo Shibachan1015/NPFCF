@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="奈良県履物協同組合連合会の公式ホームページ">
-    <title>奈良県履物協同組合連合会</title>
+    <title>奈良県履物協同組合連合会 | Nara Footwear Federation</title>
     <script>
-        // ページ読み込み前にテーマを適用（FOUC防止）
+        // ページ読み込み前にテーマ・言語を適用（FOUC防止）
         (function () {
             const savedTheme = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-theme', savedTheme);
+            const savedLang = localStorage.getItem('lang') || 'ja';
+            document.documentElement.setAttribute('lang', savedLang);
         })();
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -20,9 +22,12 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="assets/images/narahakimono_logo修正済み.jpg" alt="奈良県履物協同組合連合会">
+                <img src="assets/images/narahakimono_logo修正済み.jpg" alt="Nara Prefecture Footwear Cooperative Federation / 奈良県履物協同組合連合会">
             </div>
             <nav>
+                <button class="lang-toggle" aria-label="Language / 言語" id="langToggle">
+                    <span class="lang-label">EN</span>
+                </button>
                 <button class="theme-toggle" aria-label="テーマ切り替え" id="themeToggle">
                     <span class="theme-icon">🌙</span>
                 </button>
@@ -31,7 +36,7 @@
                     <li><a href="#message">MESSAGE</a></li>
                     <li><a href="#gallery">GALLERY</a></li>
                     <li><a href="#keyproduct">KEYPRODUCT</a></li>
-                    <li><a href="#link">LINK/組合員</a></li>
+                    <li><a href="#link"><span lang="ja">LINK/組合員</span><span lang="en">LINK/MEMBERS</span></a></li>
                     <li><a href="#efforts">EFFORTS BUSINESS</a></li>
                     <li><a href="#company">COMPANY</a></li>
                 </ul>
@@ -51,8 +56,9 @@
                     <div class="hero-text">
                         <div class="hero-decoration hero-decoration-top"></div>
                         <h1 class="hero-title">
-                            <span class="hero-title-text">奈良県履物協同組合連合会</span>
-                            <img src="assets/images/narahakimono_logo修正済み.jpg" alt="奈良県履物協同組合連合会" class="hero-title-image">
+                            <span class="hero-title-text" lang="ja">奈良県履物協同組合連合会</span>
+                            <span class="hero-title-text" lang="en">Nara Prefecture Footwear Cooperative Federation</span>
+                            <img src="assets/images/narahakimono_logo修正済み.jpg" alt="Nara Prefecture Footwear Cooperative Federation" class="hero-title-image">
                         </h1>
                         <div class="hero-decoration hero-decoration-bottom"></div>
                     </div>
@@ -64,7 +70,9 @@
             <div class="container">
                 <h2>MESSAGE</h2>
                 <div class="content">
-                    <p>奈良県履物協同組合連合会は1982（昭和57）年3月に設立し、1985（昭和60）年には350社を超える組合員を数え、1986（昭和61）年には活動拠点として御所市産業振興センターが設置されました。連合会設立以前の1973（昭和48）年から「奈良県はきもの大見本市」として展示会商談会、1988（昭和63）年から消費者の認知度と組合員の質的向上を図る事を目的に「サンダル履物コンテスト」並びに人材育成に資する「研修会」の開催など、関係機関の協力を得て各種業界支援の取組みを行っています。
+                    <p lang="ja">奈良県履物協同組合連合会は1982（昭和57）年3月に設立し、1985（昭和60）年には350社を超える組合員を数え、1986（昭和61）年には活動拠点として御所市産業振興センターが設置されました。連合会設立以前の1973（昭和48）年から「奈良県はきもの大見本市」として展示会商談会、1988（昭和63）年から消費者の認知度と組合員の質的向上を図る事を目的に「サンダル履物コンテスト」並びに人材育成に資する「研修会」の開催など、関係機関の協力を得て各種業界支援の取組みを行っています。
+                    </p>
+                    <p lang="en">The Nara Prefecture Footwear Cooperative Federation was established in March 1982 (Shōwa 57). By 1985 (Shōwa 60), the federation had grown to over 350 member companies, and in 1986 (Shōwa 61) the Gose City Industrial Promotion Center was opened as our operational base. Even before the federation's founding, the "Nara Prefecture Footwear Trade Fair" had been held as a business exhibition starting in 1973 (Shōwa 48). Since 1988 (Shōwa 63), with the aim of raising consumer awareness and improving the quality of our members, we have also organized the "Sandal Footwear Contest" and training seminars for human resource development. Through cooperation with related organizations, we continue a wide range of efforts to support the industry.
                     </p>
                 </div>
             </div>
@@ -75,28 +83,28 @@
                 <h2>GALLERY</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img src="assets/images/photo01-00.jpg" alt="ギャラリー画像1">
+                        <img src="assets/images/photo01-00.jpg" alt="Gallery image 1">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/images/photo03-00.jpg" alt="ギャラリー画像2">
+                        <img src="assets/images/photo03-00.jpg" alt="Gallery image 2">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/images/photo03-852-836.jpg" alt="ギャラリー画像3">
+                        <img src="assets/images/photo03-852-836.jpg" alt="Gallery image 3">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/images/photo04-00b.jpg" alt="ギャラリー画像4">
+                        <img src="assets/images/photo04-00b.jpg" alt="Gallery image 4">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/images/photo04-852-836.jpg" alt="ギャラリー画像5">
+                        <img src="assets/images/photo04-852-836.jpg" alt="Gallery image 5">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/images/photo04-1717.jpg" alt="ギャラリー画像6">
+                        <img src="assets/images/photo04-1717.jpg" alt="Gallery image 6">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/images/photo05-852-836.jpg" alt="ギャラリー画像7">
+                        <img src="assets/images/photo05-852-836.jpg" alt="Gallery image 7">
                     </div>
                     <div class="gallery-item">
-                        <img src="assets/images/photo07-3165.jpg" alt="ギャラリー画像8">
+                        <img src="assets/images/photo07-3165.jpg" alt="Gallery image 8">
                     </div>
                 </div>
             </div>
@@ -107,18 +115,27 @@
                 <h2>KEYPRODUCT</h2>
                 <div class="product-grid">
                     <div class="product-item">
-                        <h3>和装履き</h3>
-                        <p>「ならはきもの」の礎ともなる和装履きは、下駄・和装草履・雪駄類の製品を総称しています。奈良・御所では役行者が履物の祖といった伝承もありますが、明治初期に鼻緒の生産が始まり、昭和20年代後半には草履にゴム底を使用することで耐久性と履き心地が改良されて以来、日本の気候風土に適した機能を備えた和装履き製品の開発が重ねられ、その技術が脈々と受け継がれています。
+                        <h3 lang="ja">和装履き</h3>
+                        <h3 lang="en">Japanese-Style Footwear</h3>
+                        <p lang="ja">「ならはきもの」の礎ともなる和装履きは、下駄・和装草履・雪駄類の製品を総称しています。奈良・御所では役行者が履物の祖といった伝承もありますが、明治初期に鼻緒の生産が始まり、昭和20年代後半には草履にゴム底を使用することで耐久性と履き心地が改良されて以来、日本の気候風土に適した機能を備えた和装履き製品の開発が重ねられ、その技術が脈々と受け継がれています。
+                        </p>
+                        <p lang="en">Japanese-style footwear — the foundation of "Nara hakimono" — is a general term for products such as geta (wooden clogs), wasō zōri (Japanese-style sandals), and setta. In Nara and Gose, tradition holds that En no Gyōja was the originator of footwear. Production of the hanao (thong strap) began in the early Meiji period, and from the late 1940s the use of rubber soles on zōri greatly improved durability and comfort. Since then, the industry has continued to develop products suited to Japan's climate and lifestyle, with these techniques passed down across generations.
                         </p>
                     </div>
                     <div class="product-item">
-                        <h3>サンダル</h3>
-                        <p>昭和30~40年代のサンダルブームに乗ってファッション性を加味したヘップサンダル（フロントオープン・バックレスタイプ）が誕生しました。ヘップとは当時絶大な人気を誇ったオードリー・ヘップバーンにあやかったネーミングで業界の隆盛期を迎えました。その後、つま先部分を覆った防寒、足裏に刺激を与える健康、ビーチ、ナースなど多種多彩な「ならはきもの」が時代の要請と共に流通しています。
+                        <h3 lang="ja">サンダル</h3>
+                        <h3 lang="en">Sandals</h3>
+                        <p lang="ja">昭和30~40年代のサンダルブームに乗ってファッション性を加味したヘップサンダル（フロントオープン・バックレスタイプ）が誕生しました。ヘップとは当時絶大な人気を誇ったオードリー・ヘップバーンにあやかったネーミングで業界の隆盛期を迎えました。その後、つま先部分を覆った防寒、足裏に刺激を与える健康、ビーチ、ナースなど多種多彩な「ならはきもの」が時代の要請と共に流通しています。
+                        </p>
+                        <p lang="en">Riding the sandal boom of the 1950s and 60s (Shōwa 30s–40s), the fashion-oriented "Hep sandal" (front-open, backless type) was born. The name "Hep" was inspired by the immensely popular Audrey Hepburn of that era, and the industry enjoyed its golden age. Since then, a wide variety of "Nara hakimono" products have been distributed in response to changing needs — including warm closed-toe sandals, health sandals that stimulate the soles, beach sandals, and nurse sandals.
                         </p>
                     </div>
                     <div class="product-item">
-                        <h3>シューズ</h3>
-                        <p>昭和50年代以降ファッション文化や生活様式の変動に伴って多様な履物が供給される中、射出成形技術を用いて防水機能を活かしたカジュアルシューズ、レインシューズ、レインブーツ、ガーデニングブーツなどが開発され、海外製品の攻勢にも抗える独自の製法や技術・企画開発力が時代に応じて柔軟に発展する「ならはきもの」として進化し続けています。
+                        <h3 lang="ja">シューズ</h3>
+                        <h3 lang="en">Shoes</h3>
+                        <p lang="ja">昭和50年代以降ファッション文化や生活様式の変動に伴って多様な履物が供給される中、射出成形技術を用いて防水機能を活かしたカジュアルシューズ、レインシューズ、レインブーツ、ガーデニングブーツなどが開発され、海外製品の攻勢にも抗える独自の製法や技術・企画開発力が時代に応じて柔軟に発展する「ならはきもの」として進化し続けています。
+                        </p>
+                        <p lang="en">Since the late 1970s (Shōwa 50s), as fashion culture and lifestyles have evolved, a wide variety of footwear has emerged. Using injection molding technology with built-in waterproofing, casual shoes, rain shoes, rain boots, and gardening boots have been developed. With proprietary manufacturing methods, technical know-how, and product planning capabilities that can stand up to foreign competition, "Nara hakimono" continues to evolve in step with the times.
                         </p>
                     </div>
                 </div>
@@ -127,21 +144,24 @@
 
         <section id="link" class="section">
             <div class="container">
-                <h2>LINK/組合員</h2>
+                <h2><span lang="ja">LINK/組合員</span><span lang="en">LINK/MEMBERS</span></h2>
                 <div class="content">
                     <ul class="member-list">
-                        <li><a href="#member-oji">王寺履物見本市協同組合</a></li>
-                        <li><a href="#member-katsuragi">葛城市履物工業協同組合</a></li>
-                        <li><a href="#member-kobayashi">小林履物工業協同組合</a></li>
-                        <li><a href="#member-gose">御所市ケミカル工業協同組合</a></li>
-                        <li><a href="#member-seiwa">西和ヘップサンダル工業協同組合</a></li>
-                        <li><a href="#member-nara">奈良県サンダル工業協同組合</a></li>
-                        <li><a href="#member-misato">ミサト履物協同組合</a></li>
+                        <li><a href="#member-oji"><span lang="ja">王寺履物見本市協同組合</span><span lang="en">Oji Footwear Trade Fair Cooperative</span></a></li>
+                        <li><a href="#member-katsuragi"><span lang="ja">葛城市履物工業協同組合</span><span lang="en">Katsuragi City Footwear Industry Cooperative</span></a></li>
+                        <li><a href="#member-kobayashi"><span lang="ja">小林履物工業協同組合</span><span lang="en">Kobayashi Footwear Industry Cooperative</span></a></li>
+                        <li><a href="#member-gose"><span lang="ja">御所市ケミカル工業協同組合</span><span lang="en">Gose City Chemical Industry Cooperative</span></a></li>
+                        <li><a href="#member-seiwa"><span lang="ja">西和ヘップサンダル工業協同組合</span><span lang="en">Seiwa Hep-Sandal Industry Cooperative</span></a></li>
+                        <li><a href="#member-nara"><span lang="ja">奈良県サンダル工業協同組合</span><span lang="en">Nara Prefecture Sandal Industry Cooperative</span></a></li>
+                        <li><a href="#member-misato"><span lang="ja">ミサト履物協同組合</span><span lang="en">Misato Footwear Cooperative</span></a></li>
                     </ul>
                     <div class="location-info">
-                        <img src="assets/images/pgSec04-01.jpg" alt="地理的説明図" class="location-image">
-                        <p>
+                        <img src="assets/images/pgSec04-01.jpg" alt="Map of production area" class="location-image">
+                        <p lang="ja">
                             地理的には奈良県の北西部、大阪府との県境にあたる金剛葛城国定公園を基軸に北から奈良市・三郷町・王寺町・上牧町・香芝市・葛城市・大和高田市・御所市の3町5市にわたって産地形成されています。
+                        </p>
+                        <p lang="en">
+                            Geographically, the production area is centered on Kongō-Katsuragi Quasi-National Park along the border between Nara and Osaka prefectures in northwestern Nara, spanning five cities and three towns from north to south: Nara City, Sangō Town, Ōji Town, Kanmaki Town, Kashiba City, Katsuragi City, Yamatotakada City, and Gose City.
                         </p>
                     </div>
                 </div>
@@ -151,26 +171,42 @@
         <!-- 各組合の詳細セクション -->
         <section id="member-oji" class="section member-detail">
             <div class="container">
-                <h2>王寺履物見本市協同組合</h2>
+                <h2><span lang="ja">王寺履物見本市協同組合</span><span lang="en">Oji Footwear Trade Fair Cooperative</span></h2>
                 <div class="content">
                     <div class="member-info">
                         <div class="member-companies">
                             <div class="company-item">
-                                <h3>(株)中春商店</h3>
-                                <p>
+                                <h3 lang="ja">(株)中春商店</h3>
+                                <h3 lang="en">Nakaharu Shōten Co., Ltd.</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 中村 光夫<br>
                                     <strong>郵便番号:</strong> 〒636-0003<br>
                                     <strong>住所:</strong> 北葛城郡王寺町久度3-4-13<br>
                                     <strong>TEL:</strong> 0745-72-4545<br>
                                     <strong>FAX:</strong> 0745-72-4546
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Mitsuo Nakamura<br>
+                                    <strong>Postal Code:</strong> 〒636-0003<br>
+                                    <strong>Address:</strong> 3-4-13 Kudo, Ōji-chō, Kitakatsuragi-gun, Nara<br>
+                                    <strong>TEL:</strong> 0745-72-4545<br>
+                                    <strong>FAX:</strong> 0745-72-4546
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>(株)眞柴本店</h3>
-                                <p>
+                                <h3 lang="ja">(株)眞柴本店</h3>
+                                <h3 lang="en">Mashiba Honten Co., Ltd.</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 眞柴 建夫<br>
                                     <strong>郵便番号:</strong> 〒636-0003<br>
                                     <strong>住所:</strong> 北葛城郡王寺町久度3-4-12<br>
+                                    <strong>TEL:</strong> 0745-32-5678<br>
+                                    <strong>FAX:</strong> 0745-32-4567
+                                </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Tateo Mashiba<br>
+                                    <strong>Postal Code:</strong> 〒636-0003<br>
+                                    <strong>Address:</strong> 3-4-12 Kudo, Ōji-chō, Kitakatsuragi-gun, Nara<br>
                                     <strong>TEL:</strong> 0745-32-5678<br>
                                     <strong>FAX:</strong> 0745-32-4567
                                 </p>
@@ -183,66 +219,114 @@
 
         <section id="member-katsuragi" class="section member-detail">
             <div class="container">
-                <h2>葛城市履物工業協同組合</h2>
+                <h2><span lang="ja">葛城市履物工業協同組合</span><span lang="en">Katsuragi City Footwear Industry Cooperative</span></h2>
                 <div class="content">
                     <div class="member-info">
                         <div class="member-companies">
                             <div class="company-item">
-                                <h3>KOSENツジモト</h3>
-                                <p>
+                                <h3 lang="ja">KOSENツジモト</h3>
+                                <h3 lang="en">KOSEN Tsujimoto</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 辻本 伸<br>
                                     <strong>郵便番号:</strong> 〒639-2126<br>
                                     <strong>住所:</strong> 葛城市南花内264-6<br>
                                     <strong>TEL:</strong> 0745-69-5210<br>
                                     <strong>FAX:</strong> 0745-69-6767
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Shin Tsujimoto<br>
+                                    <strong>Postal Code:</strong> 〒639-2126<br>
+                                    <strong>Address:</strong> 264-6 Minamihanauchi, Katsuragi City, Nara<br>
+                                    <strong>TEL:</strong> 0745-69-5210<br>
+                                    <strong>FAX:</strong> 0745-69-6767
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>ドラゴンゴム工業所</h3>
-                                <p>
+                                <h3 lang="ja">ドラゴンゴム工業所</h3>
+                                <h3 lang="en">Dragon Rubber Works</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 松浦 晃<br>
                                     <strong>郵便番号:</strong> 〒639-2122<br>
                                     <strong>住所:</strong> 葛城市薑106-3<br>
                                     <strong>TEL:</strong> 0745-62-2168<br>
                                     <strong>FAX:</strong> 0745-62-4636
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Akira Matsuura<br>
+                                    <strong>Postal Code:</strong> 〒639-2122<br>
+                                    <strong>Address:</strong> 106-3 Hajikami, Katsuragi City, Nara<br>
+                                    <strong>TEL:</strong> 0745-62-2168<br>
+                                    <strong>FAX:</strong> 0745-62-4636
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>(株)マルサンフットウエアー</h3>
-                                <p>
+                                <h3 lang="ja">(株)マルサンフットウエアー</h3>
+                                <h3 lang="en">Marusan Footwear Co., Ltd.</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 西邨 安雄<br>
                                     <strong>郵便番号:</strong> 〒639-2301<br>
                                     <strong>住所:</strong> 御所市元町85-1<br>
                                     <strong>TEL:</strong> 0745-65-2105<br>
                                     <strong>FAX:</strong> 0745-65-0159
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Yasuo Nishimura<br>
+                                    <strong>Postal Code:</strong> 〒639-2301<br>
+                                    <strong>Address:</strong> 85-1 Motomachi, Gose City, Nara<br>
+                                    <strong>TEL:</strong> 0745-65-2105<br>
+                                    <strong>FAX:</strong> 0745-65-0159
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>森川ゴム工業所</h3>
-                                <p>
+                                <h3 lang="ja">森川ゴム工業所</h3>
+                                <h3 lang="en">Morikawa Rubber Works</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 森川 啓二<br>
                                     <strong>郵便番号:</strong> 〒639-2123<br>
                                     <strong>住所:</strong> 葛城市忍海467-5<br>
                                     <strong>TEL:</strong> 0745-62-3618<br>
                                     <strong>FAX:</strong> 0745-65-1348
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Keiji Morikawa<br>
+                                    <strong>Postal Code:</strong> 〒639-2123<br>
+                                    <strong>Address:</strong> 467-5 Oshimi, Katsuragi City, Nara<br>
+                                    <strong>TEL:</strong> 0745-62-3618<br>
+                                    <strong>FAX:</strong> 0745-65-1348
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>森川ゴム工業所</h3>
-                                <p>
+                                <h3 lang="ja">森川ゴム工業所</h3>
+                                <h3 lang="en">Morikawa Rubber Works</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 森川 良一<br>
                                     <strong>郵便番号:</strong> 〒639-2123<br>
                                     <strong>住所:</strong> 葛城市忍海467-5<br>
                                     <strong>TEL:</strong> 0745-62-3618<br>
                                     <strong>FAX:</strong> 0745-65-1348
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Ryōichi Morikawa<br>
+                                    <strong>Postal Code:</strong> 〒639-2123<br>
+                                    <strong>Address:</strong> 467-5 Oshimi, Katsuragi City, Nara<br>
+                                    <strong>TEL:</strong> 0745-62-3618<br>
+                                    <strong>FAX:</strong> 0745-65-1348
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>(株)山一</h3>
-                                <p>
+                                <h3 lang="ja">(株)山一</h3>
+                                <h3 lang="en">Yamaichi Co., Ltd.</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 山名 修士<br>
                                     <strong>郵便番号:</strong> 〒639-2123<br>
                                     <strong>住所:</strong> 葛城市忍海479<br>
+                                    <strong>TEL:</strong> 0745-63-0801<br>
+                                    <strong>FAX:</strong> 0745-63-1676
+                                </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Shūji Yamana<br>
+                                    <strong>Postal Code:</strong> 〒639-2123<br>
+                                    <strong>Address:</strong> 479 Oshimi, Katsuragi City, Nara<br>
                                     <strong>TEL:</strong> 0745-63-0801<br>
                                     <strong>FAX:</strong> 0745-63-1676
                                 </p>
@@ -255,36 +339,60 @@
 
         <section id="member-kobayashi" class="section member-detail">
             <div class="container">
-                <h2>小林履物工業協同組合</h2>
+                <h2><span lang="ja">小林履物工業協同組合</span><span lang="en">Kobayashi Footwear Industry Cooperative</span></h2>
                 <div class="content">
                     <div class="member-info">
                         <div class="member-companies">
                             <div class="company-item">
-                                <h3>中嶌草履工業所</h3>
-                                <p>
+                                <h3 lang="ja">中嶌草履工業所</h3>
+                                <h3 lang="en">Nakashima Zōri Works</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 中嶌 成悟<br>
                                     <strong>郵便番号:</strong> 〒639-2311<br>
                                     <strong>住所:</strong> 御所市小林592-1<br>
                                     <strong>TEL:</strong> 0745-62-6136<br>
                                     <strong>FAX:</strong> 0745-62-2874
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Seigo Nakashima<br>
+                                    <strong>Postal Code:</strong> 〒639-2311<br>
+                                    <strong>Address:</strong> 592-1 Kobayashi, Gose City, Nara<br>
+                                    <strong>TEL:</strong> 0745-62-6136<br>
+                                    <strong>FAX:</strong> 0745-62-2874
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>天狗印(株)</h3>
-                                <p>
+                                <h3 lang="ja">天狗印(株)</h3>
+                                <h3 lang="en">Tengu-Jirushi Co., Ltd.</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 細川 良子<br>
                                     <strong>郵便番号:</strong> 〒639-2302<br>
                                     <strong>住所:</strong> 御所市東松本286<br>
                                     <strong>TEL:</strong> 0745-47-2503<br>
                                     <strong>FAX:</strong> 0745-47-2128
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Yoshiko Hosokawa<br>
+                                    <strong>Postal Code:</strong> 〒639-2302<br>
+                                    <strong>Address:</strong> 286 Higashimatsumoto, Gose City, Nara<br>
+                                    <strong>TEL:</strong> 0745-47-2503<br>
+                                    <strong>FAX:</strong> 0745-47-2128
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>細川ゴム工業所</h3>
-                                <p>
+                                <h3 lang="ja">細川ゴム工業所</h3>
+                                <h3 lang="en">Hosokawa Rubber Works</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 細川 壱寛<br>
                                     <strong>郵便番号:</strong> 〒639-2302<br>
                                     <strong>住所:</strong> 御所市東松本286<br>
+                                    <strong>TEL:</strong> 0745-62-2407<br>
+                                    <strong>FAX:</strong> 0745-62-2408
+                                </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Ichihiro Hosokawa<br>
+                                    <strong>Postal Code:</strong> 〒639-2302<br>
+                                    <strong>Address:</strong> 286 Higashimatsumoto, Gose City, Nara<br>
                                     <strong>TEL:</strong> 0745-62-2407<br>
                                     <strong>FAX:</strong> 0745-62-2408
                                 </p>
@@ -297,46 +405,78 @@
 
         <section id="member-gose" class="section member-detail">
             <div class="container">
-                <h2>御所市ケミカル工業協同組合</h2>
+                <h2><span lang="ja">御所市ケミカル工業協同組合</span><span lang="en">Gose City Chemical Industry Cooperative</span></h2>
                 <div class="content">
                     <div class="member-info">
                         <div class="member-companies">
                             <div class="company-item">
-                                <h3>(株)一歩</h3>
-                                <p>
+                                <h3 lang="ja">(株)一歩</h3>
+                                <h3 lang="en">Ippo Co., Ltd.</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 山名 勉<br>
                                     <strong>郵便番号:</strong> 〒639-2205<br>
                                     <strong>住所:</strong> 御所市東辻174-1<br>
                                     <strong>TEL:</strong> 0745-63-0091<br>
                                     <strong>FAX:</strong> 0745-65-0167
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Tsutomu Yamana<br>
+                                    <strong>Postal Code:</strong> 〒639-2205<br>
+                                    <strong>Address:</strong> 174-1 Higashitsuji, Gose City, Nara<br>
+                                    <strong>TEL:</strong> 0745-63-0091<br>
+                                    <strong>FAX:</strong> 0745-65-0167
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>㈱ニシベケミカル</h3>
-                                <p>
+                                <h3 lang="ja">㈱ニシベケミカル</h3>
+                                <h3 lang="en">Nishibe Chemical Co., Ltd.</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 西辺 豊彦<br>
                                     <strong>郵便番号:</strong> 〒639-2301<br>
                                     <strong>住所:</strong> 御所市元町375<br>
                                     <strong>TEL:</strong> 0745-62-2696<br>
                                     <strong>FAX:</strong> 0745-65-0565
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Toyohiko Nishibe<br>
+                                    <strong>Postal Code:</strong> 〒639-2301<br>
+                                    <strong>Address:</strong> 375 Motomachi, Gose City, Nara<br>
+                                    <strong>TEL:</strong> 0745-62-2696<br>
+                                    <strong>FAX:</strong> 0745-65-0565
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>丸健ゴム工業所</h3>
-                                <p>
+                                <h3 lang="ja">丸健ゴム工業所</h3>
+                                <h3 lang="en">Maruken Rubber Works</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 増田 淳士<br>
                                     <strong>郵便番号:</strong> 〒639-2301<br>
                                     <strong>住所:</strong> 御所市元町76<br>
                                     <strong>TEL:</strong> 0745-62-2646<br>
                                     <strong>FAX:</strong> 0745-63-0228
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Atsushi Masuda<br>
+                                    <strong>Postal Code:</strong> 〒639-2301<br>
+                                    <strong>Address:</strong> 76 Motomachi, Gose City, Nara<br>
+                                    <strong>TEL:</strong> 0745-62-2646<br>
+                                    <strong>FAX:</strong> 0745-63-0228
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>(株)丸宗</h3>
-                                <p>
+                                <h3 lang="ja">(株)丸宗</h3>
+                                <h3 lang="en">Marusō Co., Ltd.</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 前田 真一朗<br>
                                     <strong>郵便番号:</strong> 〒639-0214<br>
                                     <strong>住所:</strong> 北葛城郡上牧町大字上牧3439-32<br>
+                                    <strong>TEL:</strong> 0745-76-8833<br>
+                                    <strong>FAX:</strong> 0745-76-8083
+                                </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Shin'ichirō Maeda<br>
+                                    <strong>Postal Code:</strong> 〒639-0214<br>
+                                    <strong>Address:</strong> 3439-32 Ōaza Kanmaki, Kanmaki-chō, Kitakatsuragi-gun, Nara<br>
                                     <strong>TEL:</strong> 0745-76-8833<br>
                                     <strong>FAX:</strong> 0745-76-8083
                                 </p>
@@ -349,46 +489,78 @@
 
         <section id="member-seiwa" class="section member-detail">
             <div class="container">
-                <h2>西和ヘップサンダル工業協同組合</h2>
+                <h2><span lang="ja">西和ヘップサンダル工業協同組合</span><span lang="en">Seiwa Hep-Sandal Industry Cooperative</span></h2>
                 <div class="content">
                     <div class="member-info">
                         <div class="member-companies">
                             <div class="company-item">
-                                <h3>磯部商店</h3>
-                                <p>
+                                <h3 lang="ja">磯部商店</h3>
+                                <h3 lang="en">Isobe Shōten</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 磯部 通弘<br>
                                     <strong>郵便番号:</strong> 〒639-0214<br>
                                     <strong>住所:</strong> 北葛城郡上牧町上牧4705-2<br>
                                     <strong>TEL:</strong> 0745-77-8370<br>
                                     <strong>FAX:</strong> 0745-77-6637
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Michihiro Isobe<br>
+                                    <strong>Postal Code:</strong> 〒639-0214<br>
+                                    <strong>Address:</strong> 4705-2 Kanmaki, Kanmaki-chō, Kitakatsuragi-gun, Nara<br>
+                                    <strong>TEL:</strong> 0745-77-8370<br>
+                                    <strong>FAX:</strong> 0745-77-6637
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>ダルマゴム工業所</h3>
-                                <p>
+                                <h3 lang="ja">ダルマゴム工業所</h3>
+                                <h3 lang="en">Daruma Rubber Works</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 西尾 朝夫<br>
                                     <strong>郵便番号:</strong> 〒639-0265<br>
                                     <strong>住所:</strong> 香芝市上中475-1<br>
                                     <strong>TEL:</strong> 0745-77-3986<br>
                                     <strong>FAX:</strong> 0745-78-3986
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Asao Nishio<br>
+                                    <strong>Postal Code:</strong> 〒639-0265<br>
+                                    <strong>Address:</strong> 475-1 Kaminaka, Kashiba City, Nara<br>
+                                    <strong>TEL:</strong> 0745-77-3986<br>
+                                    <strong>FAX:</strong> 0745-78-3986
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>中村サンダル</h3>
-                                <p>
+                                <h3 lang="ja">中村サンダル</h3>
+                                <h3 lang="en">Nakamura Sandal</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 中村 知也<br>
                                     <strong>郵便番号:</strong> 〒639-0265<br>
                                     <strong>住所:</strong> 香芝市上中450-3<br>
                                     <strong>TEL:</strong> 0745-77-7070<br>
                                     <strong>FAX:</strong> 0745-77-7109
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Tomoya Nakamura<br>
+                                    <strong>Postal Code:</strong> 〒639-0265<br>
+                                    <strong>Address:</strong> 450-3 Kaminaka, Kashiba City, Nara<br>
+                                    <strong>TEL:</strong> 0745-77-7070<br>
+                                    <strong>FAX:</strong> 0745-77-7109
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>(株)丸宗</h3>
-                                <p>
+                                <h3 lang="ja">(株)丸宗</h3>
+                                <h3 lang="en">Marusō Co., Ltd.</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 中村 𠮷則<br>
                                     <strong>郵便番号:</strong> 〒639-0214<br>
                                     <strong>住所:</strong> 北葛城郡上牧町大字上牧3439-32<br>
+                                    <strong>TEL:</strong> 0745-76-8833<br>
+                                    <strong>FAX:</strong> 0745-76-8083
+                                </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Yoshinori Nakamura<br>
+                                    <strong>Postal Code:</strong> 〒639-0214<br>
+                                    <strong>Address:</strong> 3439-32 Ōaza Kanmaki, Kanmaki-chō, Kitakatsuragi-gun, Nara<br>
                                     <strong>TEL:</strong> 0745-76-8833<br>
                                     <strong>FAX:</strong> 0745-76-8083
                                 </p>
@@ -401,66 +573,113 @@
 
         <section id="member-nara" class="section member-detail">
             <div class="container">
-                <h2>奈良県サンダル工業協同組合</h2>
+                <h2><span lang="ja">奈良県サンダル工業協同組合</span><span lang="en">Nara Prefecture Sandal Industry Cooperative</span></h2>
                 <div class="content">
                     <div class="member-info">
                         <div class="member-companies">
                             <div class="company-item">
-                                <h3>(株)カワムラ企画</h3>
-                                <p>
+                                <h3 lang="ja">(株)カワムラ企画</h3>
+                                <h3 lang="en">Kawamura Planning Co., Ltd.</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 川村 三津男<br>
                                     <strong>郵便番号:</strong> 〒635-0077<br>
                                     <strong>住所:</strong> 大和高田市大字池田220-4<br>
                                     <strong>TEL:</strong> 0745-52-1866<br>
                                     <strong>FAX:</strong> 0745-51-0764
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Mitsuo Kawamura<br>
+                                    <strong>Postal Code:</strong> 〒635-0077<br>
+                                    <strong>Address:</strong> 220-4 Ōaza Ikeda, Yamatotakada City, Nara<br>
+                                    <strong>TEL:</strong> 0745-52-1866<br>
+                                    <strong>FAX:</strong> 0745-51-0764
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>酒田工業所</h3>
-                                <p>
+                                <h3 lang="ja">酒田工業所</h3>
+                                <h3 lang="en">Sakata Works</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 酒田 淳吾<br>
                                     <strong>郵便番号:</strong> 〒636-0821<br>
                                     <strong>住所:</strong> 生駒郡三郷町立野北1-31-21<br>
                                     <strong>TEL:</strong> 0745-72-2543<br>
                                     <strong>FAX:</strong> 0745-32-3537
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Jungo Sakata<br>
+                                    <strong>Postal Code:</strong> 〒636-0821<br>
+                                    <strong>Address:</strong> 1-31-21 Tatsunokita, Sangō-chō, Ikoma-gun, Nara<br>
+                                    <strong>TEL:</strong> 0745-72-2543<br>
+                                    <strong>FAX:</strong> 0745-32-3537
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>酒田ゴム工業所</h3>
-                                <p>
+                                <h3 lang="ja">酒田ゴム工業所</h3>
+                                <h3 lang="en">Sakata Rubber Works</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 酒田 宣昭<br>
                                     <strong>郵便番号:</strong> 〒636-0811<br>
                                     <strong>住所:</strong> 生駒郡三郷町勢野東1-7-46<br>
                                     <strong>TEL:</strong> 0745-73-2461<br>
                                     <strong>FAX:</strong> 0745-73-2580
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Nobuaki Sakata<br>
+                                    <strong>Postal Code:</strong> 〒636-0811<br>
+                                    <strong>Address:</strong> 1-7-46 Senohigashi, Sangō-chō, Ikoma-gun, Nara<br>
+                                    <strong>TEL:</strong> 0745-73-2461<br>
+                                    <strong>FAX:</strong> 0745-73-2580
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>(株)DESIGN SETTA SANGO</h3>
-                                <p>
+                                <h3 lang="ja">(株)DESIGN SETTA SANGO</h3>
+                                <h3 lang="en">DESIGN SETTA SANGO Co., Ltd.</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 星田 和彦<br>
                                     <strong>郵便番号:</strong> 〒636-0822<br>
                                     <strong>住所:</strong> 生駒郡三郷町立野南3-1-18 JAMビル<br>
                                     <strong>TEL:</strong> 0745-27-4574<br>
                                     <strong>FAX:</strong> 0745-73-1187
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Kazuhiko Hoshida<br>
+                                    <strong>Postal Code:</strong> 〒636-0822<br>
+                                    <strong>Address:</strong> 3-1-18 Tatsunominami, Sangō-chō, Ikoma-gun, Nara, JAM Bldg.<br>
+                                    <strong>TEL:</strong> 0745-27-4574<br>
+                                    <strong>FAX:</strong> 0745-73-1187
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>丸山ゴム工業所</h3>
-                                <p>
+                                <h3 lang="ja">丸山ゴム工業所</h3>
+                                <h3 lang="en">Maruyama Rubber Works</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 丸山 庸誉<br>
                                     <strong>郵便番号:</strong> 〒630-8453<br>
                                     <strong>住所:</strong> 奈良市西九条町3-11-17<br>
                                     <strong>TEL:</strong> 0742-62-3078<br>
                                     <strong>FAX:</strong> 0742-62-3078
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Tsunetaka Maruyama<br>
+                                    <strong>Postal Code:</strong> 〒630-8453<br>
+                                    <strong>Address:</strong> 3-11-17 Nishikujō-chō, Nara City, Nara<br>
+                                    <strong>TEL:</strong> 0742-62-3078<br>
+                                    <strong>FAX:</strong> 0742-62-3078
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>わさびや</h3>
-                                <p>
+                                <h3 lang="ja">わさびや</h3>
+                                <h3 lang="en">Wasabiya</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 芝﨑 多加夫<br>
                                     <strong>郵便番号:</strong> 〒636-0821<br>
                                     <strong>住所:</strong> 生駒郡三郷町立野北１丁目33-30<br>
+                                    <strong>TEL:</strong> 0745-51-2107
+                                </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Takao Shibasaki<br>
+                                    <strong>Postal Code:</strong> 〒636-0821<br>
+                                    <strong>Address:</strong> 1-33-30 Tatsunokita, Sangō-chō, Ikoma-gun, Nara<br>
                                     <strong>TEL:</strong> 0745-51-2107
                                 </p>
                             </div>
@@ -472,36 +691,60 @@
 
         <section id="member-misato" class="section member-detail">
             <div class="container">
-                <h2>ミサト履物協同組合</h2>
+                <h2><span lang="ja">ミサト履物協同組合</span><span lang="en">Misato Footwear Cooperative</span></h2>
                 <div class="content">
                     <div class="member-info">
                         <div class="member-companies">
                             <div class="company-item">
-                                <h3>風本商店</h3>
-                                <p>
+                                <h3 lang="ja">風本商店</h3>
+                                <h3 lang="en">Kazamoto Shōten</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 風本 圭司<br>
                                     <strong>郵便番号:</strong> 〒636-0822<br>
                                     <strong>住所:</strong> 生駒郡三郷町立野南1-6-18<br>
                                     <strong>TEL:</strong> 0745-72-2708<br>
                                     <strong>FAX:</strong> 0745-60-3386
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Keiji Kazamoto<br>
+                                    <strong>Postal Code:</strong> 〒636-0822<br>
+                                    <strong>Address:</strong> 1-6-18 Tatsunominami, Sangō-chō, Ikoma-gun, Nara<br>
+                                    <strong>TEL:</strong> 0745-72-2708<br>
+                                    <strong>FAX:</strong> 0745-60-3386
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>風本商店</h3>
-                                <p>
+                                <h3 lang="ja">風本商店</h3>
+                                <h3 lang="en">Kazamoto Shōten</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 風本 和秀<br>
                                     <strong>郵便番号:</strong> 〒636-0821<br>
                                     <strong>住所:</strong> 生駒郡三郷町立野北1-39-22<br>
                                     <strong>TEL:</strong> 0745-72-4523<br>
                                     <strong>FAX:</strong> 0745-72-4523
                                 </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Kazuhide Kazamoto<br>
+                                    <strong>Postal Code:</strong> 〒636-0821<br>
+                                    <strong>Address:</strong> 1-39-22 Tatsunokita, Sangō-chō, Ikoma-gun, Nara<br>
+                                    <strong>TEL:</strong> 0745-72-4523<br>
+                                    <strong>FAX:</strong> 0745-72-4523
+                                </p>
                             </div>
                             <div class="company-item">
-                                <h3>芝惣商店</h3>
-                                <p>
+                                <h3 lang="ja">芝惣商店</h3>
+                                <h3 lang="en">Shibasō Shōten</h3>
+                                <p lang="ja">
                                     <strong>氏名:</strong> 芝﨑 安伸<br>
                                     <strong>郵便番号:</strong> 〒636-0821<br>
                                     <strong>住所:</strong> 生駒郡三郷町立野北1-41-4<br>
+                                    <strong>TEL:</strong> 0745-72-2247<br>
+                                    <strong>FAX:</strong> 0745-72-0562
+                                </p>
+                                <p lang="en">
+                                    <strong>Representative:</strong> Yasunobu Shibasaki<br>
+                                    <strong>Postal Code:</strong> 〒636-0821<br>
+                                    <strong>Address:</strong> 1-41-4 Tatsunokita, Sangō-chō, Ikoma-gun, Nara<br>
                                     <strong>TEL:</strong> 0745-72-2247<br>
                                     <strong>FAX:</strong> 0745-72-0562
                                 </p>
@@ -509,10 +752,17 @@
                         </div>
                         <div class="cooperative-info"
                             style="margin-top: 30px; padding: 20px; background: var(--bg-white); border-radius: 8px; border: 1px solid var(--border-color);">
-                            <h3 style="margin-bottom: 15px; color: var(--text-primary);">組合事務所</h3>
-                            <p style="margin: 0; color: var(--text-secondary); line-height: 2;">
+                            <h3 lang="ja" style="margin-bottom: 15px; color: var(--text-primary);">組合事務所</h3>
+                            <h3 lang="en" style="margin-bottom: 15px; color: var(--text-primary);">Cooperative Office</h3>
+                            <p lang="ja" style="margin: 0; color: var(--text-secondary); line-height: 2;">
                                 <strong>郵便番号:</strong> 〒636-0821<br>
                                 <strong>住所:</strong> 生駒郡三郷町立野北1丁目26-23<br>
+                                <strong>TEL:</strong> 0745-73-7822<br>
+                                <strong>FAX:</strong> 0745-32-5177
+                            </p>
+                            <p lang="en" style="margin: 0; color: var(--text-secondary); line-height: 2;">
+                                <strong>Postal Code:</strong> 〒636-0821<br>
+                                <strong>Address:</strong> 1-26-23 Tatsunokita, Sangō-chō, Ikoma-gun, Nara<br>
                                 <strong>TEL:</strong> 0745-73-7822<br>
                                 <strong>FAX:</strong> 0745-32-5177
                             </p>
@@ -529,14 +779,19 @@
                     <div class="event-item">
                         <div class="event-content">
                             <div class="event-image">
-                                <img src="assets/images/imgProject 01-1.jpg" alt="全国サンダルフェア">
+                                <img src="assets/images/imgProject 01-1.jpg" alt="National Sandal Fair">
                             </div>
                             <div class="event-text">
-                                <h3>全国サンダルフェア Spring＆Summer Collection in 神戸</h3>
-                                <p>神戸国際展示場）日本グランドシューズコレクションと同時開催</p>
-                                <p><strong>5月展 第181回</strong> 2025年05月21日(水)・22日(木)／<strong>10月展 第182回</strong>
+                                <h3 lang="ja">全国サンダルフェア Spring＆Summer Collection in 神戸</h3>
+                                <h3 lang="en">National Sandal Fair: Spring & Summer Collection in Kobe</h3>
+                                <p lang="ja">神戸国際展示場）日本グランドシューズコレクションと同時開催</p>
+                                <p lang="en">Kobe International Exhibition Hall — held concurrently with the Japan Grand Shoes Collection</p>
+                                <p lang="ja"><strong>5月展 第181回</strong> 2025年05月21日(水)・22日(木)／<strong>10月展 第182回</strong>
                                     2025年10月15日(水)・16日(木)</p>
-                                <p>各出展者が取り揃えた、展示商談会になります。主催/日本ケミカルシューズ工業組合・共催/全日本ケミカルサンダル工業協同組合連合会・後援/近畿経済産業局/兵庫県/神戸市/神戸商工会議所/（公社）兵庫県物産協会/（一財）神戸国際観光コンベンション協会。
+                                <p lang="en"><strong>May Exhibition, 181st edition:</strong> May 21 (Wed) & 22 (Thu), 2025 / <strong>October Exhibition, 182nd edition:</strong> October 15 (Wed) & 16 (Thu), 2025</p>
+                                <p lang="ja">各出展者が取り揃えた、展示商談会になります。主催/日本ケミカルシューズ工業組合・共催/全日本ケミカルサンダル工業協同組合連合会・後援/近畿経済産業局/兵庫県/神戸市/神戸商工会議所/（公社）兵庫県物産協会/（一財）神戸国際観光コンベンション協会。
+                                </p>
+                                <p lang="en">An exhibition and business meeting featuring offerings from each participating company. Organizer: Japan Chemical Shoes Industrial Association. Co-organizer: All Japan Chemical Sandal Industry Cooperative Federation. Support: Kinki Bureau of Economy, Trade and Industry / Hyōgo Prefecture / Kobe City / Kobe Chamber of Commerce and Industry / Hyōgo Prefecture Product Association / Kobe International Tourism and Convention Association.
                                 </p>
                             </div>
                         </div>
@@ -544,12 +799,16 @@
                     <div class="event-item">
                         <div class="event-content">
                             <div class="event-image">
-                                <img src="assets/images/photo-kei.jpg" alt="奈良はきもの杯">
+                                <img src="assets/images/photo-kei.jpg" alt="Nara Hakimono Cup">
                             </div>
                             <div class="event-text">
-                                <h3>『奈良はきもの杯』</h3>
-                                <p>開催日2025年１１月６日〜８日</p>
-                                <p>「企業協賛タイトルレース」に応募し、各種の産地PR活動を行っています。期間中には奈良県営競輪場内で商品キャンペーンなどを行い奈良県産履物の良さをPRしています。県内及び近隣府県からの来場者、全国各地から集まる出場選手に対して「履物産地・奈良」と奈良県履物の良さを認識していただくことが出来る。また、スポーツ新聞（広告記事）車券出走表CS放送等にレースタイトルが表示されることにより競輪愛好家やスポーツ新聞読者に対して広く「履物産地・奈良」をPRすることができる。
+                                <h3 lang="ja">『奈良はきもの杯』</h3>
+                                <h3 lang="en">"Nara Hakimono Cup"</h3>
+                                <p lang="ja">開催日2025年１１月６日〜８日</p>
+                                <p lang="en">Dates: November 6–8, 2025</p>
+                                <p lang="ja">「企業協賛タイトルレース」に応募し、各種の産地PR活動を行っています。期間中には奈良県営競輪場内で商品キャンペーンなどを行い奈良県産履物の良さをPRしています。県内及び近隣府県からの来場者、全国各地から集まる出場選手に対して「履物産地・奈良」と奈良県履物の良さを認識していただくことが出来る。また、スポーツ新聞（広告記事）車券出走表CS放送等にレースタイトルが表示されることにより競輪愛好家やスポーツ新聞読者に対して広く「履物産地・奈良」をPRすることができる。
+                                </p>
+                                <p lang="en">We apply for the "Corporate Sponsorship Title Race" and conduct various promotional activities for the production area. During the event, we run product campaigns at the Nara Prefectural Keirin Racetrack to promote Nara-made footwear. Visitors from within and neighboring prefectures, as well as racers gathered from across the country, can come to recognize "Nara, Footwear Production Region" and the quality of its footwear. In addition, since the race title appears in sports newspapers (advertorials), program sheets, and CS broadcasts, we can widely promote "Nara, Footwear Production Region" to keirin fans and sports paper readers.
                                 </p>
                             </div>
                         </div>
@@ -557,12 +816,16 @@
                     <div class="event-item">
                         <div class="event-content">
                             <div class="event-image">
-                                <img src="assets/images/imgProject 01-3.jpg" alt="東京インターナショナルギフトショー">
+                                <img src="assets/images/imgProject 01-3.jpg" alt="Tokyo International Gift Show">
                             </div>
                             <div class="event-text">
-                                <h3>『東京インターナショナルギフトショー』</h3>
-                                <p>開催日2026年02/4(水)～6(金)（3日間）</p>
-                                <p>国内最大規模である標記展示会に出展し、全国各地から集まるバイヤーに新製品及び既存製品と「履物産地・奈良」の魅力を紹介・発信する事によって、より効果的な販路開拓やバイヤー等の評価を集約して新製品開発の参考とする事を目的とします。
+                                <h3 lang="ja">『東京インターナショナルギフトショー』</h3>
+                                <h3 lang="en">"Tokyo International Gift Show"</h3>
+                                <p lang="ja">開催日2026年02/4(水)～6(金)（3日間）</p>
+                                <p lang="en">Dates: February 4 (Wed) – 6 (Fri), 2026 (3 days)</p>
+                                <p lang="ja">国内最大規模である標記展示会に出展し、全国各地から集まるバイヤーに新製品及び既存製品と「履物産地・奈良」の魅力を紹介・発信する事によって、より効果的な販路開拓やバイヤー等の評価を集約して新製品開発の参考とする事を目的とします。
+                                </p>
+                                <p lang="en">We exhibit at this exhibition, the largest of its kind in Japan, to introduce new and existing products and the appeal of "Nara, Footwear Production Region" to buyers gathered from across the country. The aim is to develop more effective sales channels and to gather buyer feedback to inform future product development.
                                 </p>
                             </div>
                         </div>
@@ -570,41 +833,55 @@
                     <div class="event-item">
                         <div class="event-content">
                             <div class="event-image">
-                                <img src="assets/images/imgProject 01-4.jpg" alt="地場産品展示・即売会">
+                                <img src="assets/images/imgProject 01-4.jpg" alt="Local Specialty Products Exhibition & Sale">
                             </div>
                             <div class="event-text">
-                                <h3>『地場産品展示・即売会』</h3>
-                                <p>開催日2025年11月12日(水)・13日(木)・14日(金)</p>
-                                <p>御所市内で生産される地場産品と県下の地場産業製品を一堂に集めた展示・即売会に参加しています。皆さま是非、お越しください。</p>
+                                <h3 lang="ja">『地場産品展示・即売会』</h3>
+                                <h3 lang="en">"Local Specialty Products Exhibition & Sale"</h3>
+                                <p lang="ja">開催日2025年11月12日(水)・13日(木)・14日(金)</p>
+                                <p lang="en">Dates: November 12 (Wed), 13 (Thu), 14 (Fri), 2025</p>
+                                <p lang="ja">御所市内で生産される地場産品と県下の地場産業製品を一堂に集めた展示・即売会に参加しています。皆さま是非、お越しください。</p>
+                                <p lang="en">We participate in an exhibition and sale that brings together local specialty products from Gose City and other local industries across Nara Prefecture. Please come and visit!</p>
                             </div>
                         </div>
                     </div>
                     <div class="event-item">
                         <div class="event-content">
                             <div class="event-image">
-                                <img src="assets/images/imgProject 01-5.jpg" alt="サンダル履物コンテスト">
+                                <img src="assets/images/imgProject 01-5.jpg" alt="Sandal Footwear Contest">
                             </div>
                             <div class="event-text">
-                                <h3>『サンダル履物コンテスト』</h3>
-                                <p>県内産のサンダル履物製品に対する認識をより深く消費者にPRすると共に、産地業界においては更なる質的向上への研究と創造意欲を高めて頂く事を目的に各方面の協力を得ながら開催しています。
+                                <h3 lang="ja">『サンダル履物コンテスト』</h3>
+                                <h3 lang="en">"Sandal Footwear Contest"</h3>
+                                <p lang="ja">県内産のサンダル履物製品に対する認識をより深く消費者にPRすると共に、産地業界においては更なる質的向上への研究と創造意欲を高めて頂く事を目的に各方面の協力を得ながら開催しています。
                                 </p>
-                                <p>一般部門、ジュニア部門との両部門の中から13賞を設定し消費者（御所市女性対策推進連絡協議会）、業界（奈良県履物協同組合連合会）、の各代表や履物デザイナー並びに奈良デザイン協会会員などの各種分野の方々の審査を経た入賞作品数点。また、その中から5点選出し試作化がなされる。詳しい内容は、御所市HPに掲載されています。
+                                <p lang="en">Held with the cooperation of various organizations, this contest aims to raise consumer awareness of locally made sandal footwear and to encourage further research and creative ambition for quality improvement within the regional industry.
                                 </p>
-                                <p><strong>展示：「第37回サンダル履物デザイン展」＆「ならはきもの」</strong><br>
+                                <p lang="ja">一般部門、ジュニア部門との両部門の中から13賞を設定し消費者（御所市女性対策推進連絡協議会）、業界（奈良県履物協同組合連合会）、の各代表や履物デザイナー並びに奈良デザイン協会会員などの各種分野の方々の審査を経た入賞作品数点。また、その中から5点選出し試作化がなされる。詳しい内容は、御所市HPに掲載されています。
+                                </p>
+                                <p lang="en">Thirteen awards are presented across the General and Junior divisions. Entries are judged by representatives from consumer groups (Gose City Women's Policy Promotion Liaison Council), industry (Nara Prefecture Footwear Cooperative Federation), footwear designers, members of the Nara Design Association, and others from various fields. Five award-winning works are selected for prototyping. For more details, see the Gose City website.
+                                </p>
+                                <p lang="ja"><strong>展示：「第37回サンダル履物デザイン展」＆「ならはきもの」</strong><br>
                                     日時：令和6年4月23日(火)～令和6年5月6日(月) 9：00~20：00<br>
                                     場所：630-8135 奈良市大安寺西1丁目1000番地 奈良県立図書情報館 TEL 0742-34-2111（代表）</p>
+                                <p lang="en"><strong>Exhibition: "37th Sandal Footwear Design Exhibition" & "Nara Hakimono"</strong><br>
+                                    Date & Time: April 23 (Tue) – May 6 (Mon), 2024, 9:00–20:00<br>
+                                    Venue: Nara Prefectural Library and Information Center, 1000 Daianji-nishi 1-chōme, Nara City 630-8135. TEL 0742-34-2111 (main)</p>
                             </div>
                         </div>
                     </div>
                     <div class="event-item">
                         <div class="event-content">
                             <div class="event-image">
-                                <img src="assets/images/imgProject 01-6.jpg" alt="奈良県地場産品フェア">
+                                <img src="assets/images/imgProject 01-6.jpg" alt="Nara Prefecture Local Products Fair">
                             </div>
                             <div class="event-text">
-                                <h3>『奈良県地場産品フェア』</h3>
-                                <p>開催日2025年11月１日</p>
-                                <p>詳しい内容は、奈良県中小企業団体中央会HPに掲載されています。</p>
+                                <h3 lang="ja">『奈良県地場産品フェア』</h3>
+                                <h3 lang="en">"Nara Prefecture Local Products Fair"</h3>
+                                <p lang="ja">開催日2025年11月１日</p>
+                                <p lang="en">Date: November 1, 2025</p>
+                                <p lang="ja">詳しい内容は、奈良県中小企業団体中央会HPに掲載されています。</p>
+                                <p lang="en">For details, please see the website of the Nara Prefecture Federation of Small Business Associations.</p>
                             </div>
                         </div>
                     </div>
@@ -617,12 +894,18 @@
                 <h2>COMPANY</h2>
                 <div class="content">
                     <div class="company-info">
-                        <p>〒639-2301<br>
+                        <p lang="ja">〒639-2301<br>
                             奈良県御所市元町1-1<br>
                             TEL 0745-62-1288<br>
                             e-Mail hakimono@aioros.ocn.ne.jp<br>
                             営業時間 08:30〜17:15（土・日曜祝定休）<br>
                             ※都合により休業する場合がございます</p>
+                        <p lang="en">〒639-2301<br>
+                            1-1 Motomachi, Gose City, Nara, Japan<br>
+                            TEL +81-745-62-1288<br>
+                            e-Mail hakimono@aioros.ocn.ne.jp<br>
+                            Business Hours: 08:30–17:15 (Closed Sat/Sun & Holidays)<br>
+                            * We may be closed on occasion due to circumstances.</p>
                     </div>
                 </div>
             </div>
@@ -631,7 +914,8 @@
 
     <footer>
         <div class="container">
-            <p>Copyright(c) 2025 奈良県履物協同組合連合会 All Rights Reserved.</p>
+            <p lang="ja">Copyright(c) 2025 奈良県履物協同組合連合会 All Rights Reserved.</p>
+            <p lang="en">Copyright(c) 2025 Nara Prefecture Footwear Cooperative Federation. All Rights Reserved.</p>
         </div>
     </footer>
 

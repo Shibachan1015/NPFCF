@@ -139,6 +139,45 @@ nav {
     background-color: var(--bg-light);
 }
 
+.lang-toggle {
+    background: none;
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    height: 40px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+}
+
+.lang-toggle:hover {
+    background-color: var(--bg-light);
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+[data-theme="dark"] .lang-toggle {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .lang-toggle:hover {
+    background-color: var(--bg-light);
+}
+
+html[lang="ja"] [lang="en"] {
+    display: none;
+}
+
+html[lang="en"] [lang="ja"] {
+    display: none;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
