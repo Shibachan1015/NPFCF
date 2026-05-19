@@ -893,7 +893,7 @@ main {
 }
 
 /* 会社情報 */
-.company-info {
+.contact-info {
     background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
     padding: 40px;
     border-radius: 16px;
@@ -906,7 +906,7 @@ main {
     transition: background 0.3s ease;
 }
 
-.company-info a {
+.contact-info a {
     background: var(--gradient-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -916,7 +916,7 @@ main {
     transition: opacity 0.3s ease;
 }
 
-.company-info a:hover {
+.contact-info a:hover {
     opacity: 0.8;
     text-decoration: underline;
 }
@@ -1076,7 +1076,7 @@ footer a:hover {
 
     .product-item,
     .event-item,
-    .company-info {
+    .contact-info {
         padding: 20px;
     }
 
