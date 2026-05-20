@@ -21,6 +21,7 @@
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
     --gradient-text: linear-gradient(to right, #000000, #ff0000);
+    --link-color: #1F3A5F;
 }
 
 [data-theme="dark"] {
@@ -36,6 +37,7 @@
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
     --gradient-text: linear-gradient(to right, #ffffff, #ff6666);
+    --link-color: #7BA3D9;
 }
 
 /* グラデーションテキスト用のクラス */
@@ -809,7 +811,7 @@ main {
 
 .company-item p a,
 .cooperative-info p a {
-    color: var(--primary-color);
+    color: var(--link-color);
     text-decoration: none;
     font-weight: 600;
     transition: opacity 0.3s ease;
